@@ -4,8 +4,7 @@ export async function POST(req: NextRequest) {
   try {
     const data = await req.json();
 
-    // Envoi vers app.optimisez-votre-pret.fr (invisible pour le client)
-    const res = await fetch("https://app.optimisez-votre-pret.fr/api/leads/nouveau", {
+    const res = await fetch("https://app.optimisez-votre-pret.fr/api/connect", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
