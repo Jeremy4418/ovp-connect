@@ -14,7 +14,37 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "OVP Connect — Trouvez votre bien et votre financement",
-  description: "Déposez votre projet immobilier en 3 minutes. Un courtier analyse votre financement, un agent immobilier trouve votre bien idéal. 100% gratuit.",
+  description: "Déposez votre projet immobilier en quelques minutes. Un courtier analyse votre financement, un agent immobilier trouve votre bien idéal. 100% gratuit pour les acheteurs.",
+  keywords: "achat immobilier, courtier financement, agent immobilier, projet immobilier, crédit immobilier, mise en relation immobilière",
+  authors: [{ name: "OVP Connect" }],
+  creator: "OVPPRO.fr",
+  publisher: "OVPPRO.fr",
+  robots: "index, follow",
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    url: "https://ovppro.fr",
+    siteName: "OVP Connect",
+    title: "OVP Connect — Trouvez votre bien et votre financement",
+    description: "Déposez votre projet immobilier en quelques minutes. Un courtier analyse votre financement, un agent immobilier trouve votre bien idéal. 100% gratuit.",
+    images: [
+      {
+        url: "https://ovppro.fr/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "OVP Connect — Mise en relation immobilière gratuite",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "OVP Connect — Trouvez votre bien et votre financement",
+    description: "Déposez votre projet immobilier en quelques minutes. 100% gratuit.",
+    images: ["https://ovppro.fr/og-image.png"],
+  },
+  alternates: {
+    canonical: "https://ovppro.fr",
+  },
   icons: {
     icon: "/icon.svg",
   },
