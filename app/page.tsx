@@ -74,7 +74,7 @@ export default function Home() {
       <section style={{ background: "white", padding: "5rem 2rem", textAlign: "center" }}>
         <div style={{ fontSize: "12px", color: "#10b981", fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "0.75rem" }}>Pourquoi OVP Connect</div>
         <h2 style={{ fontSize: "30px", fontWeight: 500, color: "#111", marginBottom: "3rem" }}>Tout ce dont vous avez besoin</h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1.5rem", maxWidth: "720px", margin: "0 auto" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1.5rem", maxWidth: "600px", margin: "0 auto" }}>
           {[
             { icon: "🔒", title: "Données sécurisées", desc: "Vos informations sont protégées et transmises uniquement aux professionnels concernés." },
             { icon: "🎯", title: "Pros de votre secteur", desc: "Vous êtes mis en relation avec des professionnels qui interviennent dans votre zone géographique." },
