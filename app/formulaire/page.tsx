@@ -58,15 +58,15 @@ export default function Formulaire() {
   );
 
   return (
-    <div style={{ minHeight: "100vh", background: "#f0faf5", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "2rem 1rem", fontFamily: "system-ui, sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: "linear-gradient(135deg, #0a1628 0%, #0f2744 50%, #0a1628 100%)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "2rem 1rem", fontFamily: "system-ui, sans-serif" }}>
       <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "10px", justifyContent: "center", marginBottom: "6px" }}>
           <div style={{ width: "38px", height: "38px", background: "#10b981", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}>
             <svg width="20" height="20" fill="none" stroke="white" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
           </div>
-          <span style={{ fontSize: "22px", fontWeight: 500, color: "#111" }}>OVP <span style={{ color: "#10b981" }}>Connect</span></span>
+          <span style={{ fontSize: "22px", fontWeight: 500, color: "white" }}>OVP <span style={{ color: "#10b981" }}>Connect</span></span>
         </div>
-        <p style={{ fontSize: "13px", color: "#6b7280" }}>Trouvez votre bien et votre financement en un seul endroit</p>
+        <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)" }}>Trouvez votre bien et votre financement en un seul endroit</p>
       </div>
 
       <div style={{ display: "flex", alignItems: "center", gap: "4px", marginBottom: "1.5rem" }}>
@@ -221,7 +221,7 @@ export default function Formulaire() {
 
       <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginTop: "1.25rem" }}>
         {[{ icon: "🔒", text: "Données protégées" }, { icon: "✅", text: "Pros certifiés" }, { icon: "💚", text: "100% gratuit" }].map(t => (
-          <div key={t.text} style={{ display: "flex", alignItems: "center", gap: "5px", fontSize: "11px", color: "#9ca3af" }}>
+          <div key={t.text} style={{ display: "flex", alignItems: "center", gap: "5px", fontSize: "11px", color: "rgba(255,255,255,0.4)" }}>
             <span>{t.icon}</span>{t.text}
           </div>
         ))}
@@ -230,7 +230,7 @@ export default function Formulaire() {
   );
 }
 
-const lbl: React.CSSProperties = { fontSize: "12px", color: "#6b7280", display: "block", marginBottom: "4px" };
-const inp: React.CSSProperties = { width: "100%", height: "38px", border: "0.5px solid #e5e7eb", borderRadius: "8px", padding: "0 10px", fontSize: "13px", color: "#111", background: "white", outline: "none" };
-const btn: React.CSSProperties = { flex: 1, height: "40px", background: "#10b981", color: "white", border: "none", borderRadius: "8px", fontSize: "14px", fontWeight: 500, cursor: "pointer", width: "100%" };
-const btnSecondary: React.CSSProperties = { flex: 1, height: "40px", background: "white", color: "#6b7280", border: "0.5px solid #e5e7eb", borderRadius: "8px", fontSize: "14px", cursor: "pointer" };
+const lbl: React.CSSProperties = { fontSize: "13px", color: "#374151", display: "block", marginBottom: "6px", fontWeight: 500 };
+const inp: React.CSSProperties = { width: "100%", height: "42px", border: "1.5px solid #d1d5db", borderRadius: "8px", padding: "0 12px", fontSize: "14px", color: "#111", background: "white", outline: "none" };
+const btn: React.CSSProperties = { flex: 1, height: "44px", background: "#059669", color: "white", border: "none", borderRadius: "8px", fontSize: "15px", fontWeight: 600, cursor: "pointer", width: "100%" };
+const btnSecondary: React.CSSProperties = { flex: 1, height: "44px", background: "white", color: "#374151", border: "1.5px solid #d1d5db", borderRadius: "8px", fontSize: "14px", cursor: "pointer", fontWeight: 500 };
