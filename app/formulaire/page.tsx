@@ -48,7 +48,11 @@ export default function Formulaire() {
           <svg width="28" height="28" fill="none" stroke="#10b981" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
         </div>
         <h2 style={{ fontSize: "20px", fontWeight: 500, color: "#111", marginBottom: "0.75rem" }}>Demande envoyée !</h2>
-        <p style={{ fontSize: "14px", color: "#6b7280", lineHeight: 1.6 }}>Un professionnel de votre secteur va vous contacter prochainement.</p>
+        <div style={{ background: "#fef3c7", border: "0.5px solid #f59e0b", borderRadius: "8px", padding: "1rem", marginBottom: "1rem" }}>
+          <p style={{ fontSize: "14px", color: "#92400e", fontWeight: 500, marginBottom: "4px" }}>📧 Vérifiez votre boîte email</p>
+          <p style={{ fontSize: "13px", color: "#92400e", lineHeight: 1.6 }}>Nous vous avons envoyé un email de confirmation. Cliquez sur le lien pour activer votre demande et être mis en relation avec un professionnel.</p>
+        </div>
+        <p style={{ fontSize: "12px", color: "#9ca3af" }}>Vérifiez également vos spams si vous ne trouvez pas l'email.</p>
       </div>
     </div>
   );
