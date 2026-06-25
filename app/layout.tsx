@@ -46,7 +46,8 @@ export const metadata: Metadata = {
     canonical: "https://ovppro.fr",
   },
   icons: {
-    icon: "/icon.svg",
+    icon: "/favicon.ico",
+    apple: "/favicon.png",
   },
 };
 
