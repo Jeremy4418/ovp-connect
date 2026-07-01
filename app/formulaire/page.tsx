@@ -22,9 +22,19 @@ export default function Formulaire() {
   const fetchCodePostal = async (ville: string) => {
     if (ville.length < 3) return;
     try {
-      const res = await fetch(`https://geo.api.gouv.fr/communes?nom=${ville}&fields=codesPostaux&limit=1&zone=metro,drom,com`);
+      const res = await fetch(`https://geo.api.gouv.fr/communes?nom=${ville}&fields=codesPostaux&limit=1`);
       const data = await res.json();
-      if (data[0]?.codesPostaux?.[0]) set("code_postal", data[0].codesPostaux[0]);
+      if (data[0]?.codesPostaux?.[0]) { set("code_postal", data[0].codesPostaux[0]); return; }
+      // Fallback DOM-TOM
+      const domtom: Record<string, string> = {
+        'mayotte': '97600', 'mamoudzou': '97600',
+        'guadeloupe': '97100', 'pointe-a-pitre': '97110', 'basse-terre': '97100',
+        'martinique': '97200', 'fort-de-france': '97200',
+        'guyane': '97300', 'cayenne': '97300',
+        'reunion': '97400', 'saint-denis': '97400', 'saint-pierre': '97410',
+      }
+      const key = ville.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      if (domtom[key]) set("code_postal", domtom[key])
     } catch (e) {}
   };
 
