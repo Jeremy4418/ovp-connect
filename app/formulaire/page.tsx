@@ -22,7 +22,7 @@ export default function Formulaire() {
   const fetchCodePostal = async (ville: string) => {
     if (ville.length < 3) return;
     try {
-      const res = await fetch(`https://geo.api.gouv.fr/communes?nom=${ville}&fields=codesPostaux&limit=1`);
+      const res = await fetch(`https://geo.api.gouv.fr/communes?nom=${ville}&fields=codesPostaux&limit=1&zone=metro,drom,com`);
       const data = await res.json();
       if (data[0]?.codesPostaux?.[0]) set("code_postal", data[0].codesPostaux[0]);
     } catch (e) {}
