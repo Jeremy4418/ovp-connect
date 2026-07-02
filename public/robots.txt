@@ -2,4 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
+User-agent: facebookexternalhit
+Allow: /
+
 Sitemap: https://ovppro.fr/sitemap.xml
