@@ -4,31 +4,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: "https://ovppro.fr",
-      lastModified: new Date(),
+      lastModified: "2026-08-24",
       changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: "https://ovppro.fr/formulaire",
-      lastModified: new Date(),
+      lastModified: "2026-08-24",
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: "https://ovppro.fr/mentions-legales",
-      lastModified: new Date(),
+      lastModified: "2026-08-24",
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: "https://ovppro.fr/cgu",
-      lastModified: new Date(),
+      lastModified: "2026-08-24",
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: "https://ovppro.fr/confidentialite",
-      lastModified: new Date(),
+      lastModified: "2026-08-24",
       changeFrequency: "yearly",
       priority: 0.3,
     },
