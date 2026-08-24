@@ -11,62 +11,62 @@ export const metadata: Metadata = {
 
 export default function TrouverCourtier() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", background: "#fff", minHeight: "100vh" }}>
-      <nav style={{ background: "#0a1628", padding: "1rem 2rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <Link href="/" style={{ display: "flex", alignItems: "center", gap: "8px", textDecoration: "none" }}>
-          <div style={{ width: "32px", height: "32px", background: "#10b981", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <svg width="16" height="16" fill="none" stroke="white" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+    <div style={{ background: "#F2EFE7", minHeight: "100vh", color: "#241F1A" }}>
+      <nav style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 2rem", height: "64px", background: "#FBFAF6", borderBottom: "1px solid #DDD7C9" }}>
+        <Link href="/" style={{ display: "flex", alignItems: "center", gap: "8px", textDecoration: "none", color: "#241F1A", fontWeight: 700, fontSize: "16px" }}>
+          <div style={{ width: "30px", height: "30px", background: "#4A5D45", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <svg width="16" height="16" fill="none" stroke="#F2EFE7" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
           </div>
-          <span style={{ fontSize: "16px", fontWeight: 500, color: "white" }}>OVP <span style={{ color: "#10b981" }}>Connect</span></span>
+          OVP <span style={{ color: "#4A5D45" }}>Connect</span>
         </Link>
-        <Link href="/formulaire" style={{ background: "#10b981", color: "white", padding: "0 18px", height: "36px", borderRadius: "8px", fontSize: "13px", fontWeight: 500, display: "inline-flex", alignItems: "center", textDecoration: "none" }}>
+        <Link href="/formulaire" style={{ background: "#4A5D45", color: "#F2EFE7", padding: "0 18px", height: "36px", fontSize: "13px", fontWeight: 600, display: "inline-flex", alignItems: "center", textDecoration: "none" }}>
           Déposer mon projet →
         </Link>
       </nav>
 
       <div style={{ maxWidth: "720px", margin: "0 auto", padding: "3.5rem 2rem" }}>
-        <div style={{ fontSize: "12px", color: "#10b981", fontWeight: 600, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "1rem" }}>Financement</div>
-        <h1 style={{ fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 600, color: "#0a1628", letterSpacing: "-0.5px", marginBottom: "1.5rem", lineHeight: 1.2 }}>
+        <div style={{ fontSize: "12px", color: "#4A5D45", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "1rem" }}>Financement</div>
+        <h1 style={{ fontSize: "clamp(28px, 4vw, 40px)", fontWeight: 800, letterSpacing: "-0.5px", marginBottom: "1.5rem", lineHeight: 1.2 }}>
           Trouver un courtier immobilier
         </h1>
-        <p style={{ fontSize: "17px", color: "#4b5563", lineHeight: 1.7, marginBottom: "3rem" }}>
-          Le courtier en financement immobilier est l'interlocuteur clé pour préparer votre projet d'achat. Voici comment en trouver un, et pourquoi c'est une étape à ne pas négliger.
+        <p style={{ fontSize: "17px", color: "#6B5F4F", lineHeight: 1.7, marginBottom: "3rem" }}>
+          Le courtier en financement est souvent le premier professionnel à contacter dans un projet d'achat. Voici comment en trouver un, et ce qu'il change concrètement.
         </p>
 
         <section style={{ marginBottom: "2.5rem" }}>
-          <h2 style={{ fontSize: "22px", fontWeight: 600, color: "#0a1628", marginBottom: "1rem" }}>Pourquoi passer par un courtier ?</h2>
-          <p style={{ fontSize: "15px", color: "#374151", lineHeight: 1.8, marginBottom: "1rem" }}>
-            Un courtier en financement immobilier négocie votre prêt auprès de plusieurs banques, en tenant compte de votre situation professionnelle, de vos revenus et de votre apport. Il évalue votre capacité d'emprunt et vous aide à monter un dossier solide, ce qui augmente vos chances d'obtenir des conditions favorables.
+          <h2 style={{ fontSize: "21px", fontWeight: 700, marginBottom: "1rem" }}>Pourquoi passer par un courtier</h2>
+          <p style={{ fontSize: "15px", color: "#4B4438", lineHeight: 1.8, marginBottom: "1rem" }}>
+            Un courtier négocie votre prêt auprès de plusieurs banques à la fois, en s'appuyant sur votre situation professionnelle, vos revenus et votre apport. Il évalue votre capacité d'emprunt et monte un dossier qui tient la route, ce qui pèse dans la négociation des conditions du prêt.
           </p>
-          <p style={{ fontSize: "15px", color: "#374151", lineHeight: 1.8 }}>
-            Contrairement à une démarche en solo auprès d'une seule banque, le courtier compare plusieurs offres pour vous, ce qui vous fait gagner du temps sur les démarches administratives.
+          <p style={{ fontSize: "15px", color: "#4B4438", lineHeight: 1.8 }}>
+            Démarcher une seule banque en solo prend du temps et limite les comparaisons. Le courtier fait ce travail de mise en concurrence à votre place.
           </p>
         </section>
 
         <section style={{ marginBottom: "2.5rem" }}>
-          <h2 style={{ fontSize: "22px", fontWeight: 600, color: "#0a1628", marginBottom: "1rem" }}>Comment choisir un courtier fiable ?</h2>
-          <p style={{ fontSize: "15px", color: "#374151", lineHeight: 1.8, marginBottom: "1rem" }}>
-            Plusieurs critères permettent d'évaluer un courtier avant de lui confier votre projet : sa connaissance de votre zone géographique, sa transparence sur ses honoraires, et sa capacité à comprendre rapidement votre situation financière pour vous orienter vers les bons établissements bancaires.
+          <h2 style={{ fontSize: "21px", fontWeight: 700, marginBottom: "1rem" }}>Comment repérer un courtier fiable</h2>
+          <p style={{ fontSize: "15px", color: "#4B4438", lineHeight: 1.8, marginBottom: "1rem" }}>
+            Trois choses comptent surtout : sa connaissance du secteur où vous achetez, la clarté de ses honoraires, et sa capacité à cerner rapidement votre dossier pour vous orienter vers les bonnes banques.
           </p>
-          <p style={{ fontSize: "15px", color: "#374151", lineHeight: 1.8 }}>
-            Plutôt que de démarcher plusieurs courtiers un par un, il est possible d'être mis en relation directement avec un professionnel qui correspond à votre projet et à votre secteur.
+          <p style={{ fontSize: "15px", color: "#4B4438", lineHeight: 1.8 }}>
+            Plutôt que de contacter plusieurs courtiers un par un, il est possible d'être mis en relation directement avec un professionnel qui correspond à votre projet.
           </p>
         </section>
 
-        <section style={{ background: "#f0fdf4", border: "0.5px solid #bbf7d0", borderRadius: "16px", padding: "2rem", marginBottom: "2.5rem" }}>
-          <h2 style={{ fontSize: "20px", fontWeight: 600, color: "#0a1628", marginBottom: "1rem" }}>Comment OVP Connect vous met en relation</h2>
-          <p style={{ fontSize: "15px", color: "#374151", lineHeight: 1.8, marginBottom: "1rem" }}>
-            En déposant votre projet immobilier sur OVP Connect, vous êtes mis en relation gratuitement avec un courtier en financement de votre secteur. Le même formulaire permet aussi d'être connecté à un agent immobilier, pour coordonner votre recherche de bien et votre financement dès le départ.
+        <section style={{ background: "#FBFAF6", border: "1px solid #DDD7C9", padding: "2rem", marginBottom: "2.5rem" }}>
+          <h2 style={{ fontSize: "19px", fontWeight: 700, marginBottom: "1rem" }}>Comment OVP Connect vous met en relation</h2>
+          <p style={{ fontSize: "15px", color: "#4B4438", lineHeight: 1.8, marginBottom: "1rem" }}>
+            En déposant votre projet, vous êtes mis en relation gratuitement avec un courtier de votre secteur. Le même formulaire vous connecte aussi à un agent immobilier, pour avancer sur la recherche de bien et le financement en même temps.
           </p>
-          <Link href="/formulaire" style={{ display: "inline-flex", alignItems: "center", gap: "6px", background: "#10b981", color: "white", padding: "0 24px", height: "44px", borderRadius: "10px", fontSize: "14px", fontWeight: 600, textDecoration: "none" }}>
+          <Link href="/formulaire" style={{ display: "inline-flex", alignItems: "center", gap: "6px", background: "#4A5D45", color: "#F2EFE7", padding: "0 22px", height: "42px", fontSize: "14px", fontWeight: 700, textDecoration: "none" }}>
             Déposer mon projet gratuitement →
           </Link>
         </section>
 
-        <div style={{ borderTop: "0.5px solid #e5e7eb", paddingTop: "1.5rem", display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
-          <Link href="/trouver-agent-immobilier" style={{ fontSize: "13px", color: "#10b981", textDecoration: "none" }}>Trouver un agent immobilier</Link>
-          <Link href="/financement-immobilier" style={{ fontSize: "13px", color: "#10b981", textDecoration: "none" }}>Le financement immobilier</Link>
-          <Link href="/" style={{ fontSize: "13px", color: "#6b7280", textDecoration: "none" }}>← Retour à l'accueil</Link>
+        <div style={{ borderTop: "1px solid #DDD7C9", paddingTop: "1.5rem", display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
+          <Link href="/trouver-agent-immobilier" style={{ fontSize: "13px", color: "#4A5D45", textDecoration: "none" }}>Trouver un agent immobilier</Link>
+          <Link href="/financement-immobilier" style={{ fontSize: "13px", color: "#4A5D45", textDecoration: "none" }}>Le financement immobilier</Link>
+          <Link href="/" style={{ fontSize: "13px", color: "#6B5F4F", textDecoration: "none" }}>← Retour à l'accueil</Link>
         </div>
       </div>
     </div>
