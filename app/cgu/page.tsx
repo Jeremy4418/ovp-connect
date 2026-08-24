@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Conditions générales d'utilisation — OVP Connect",
+  title: "Conditions générales d'utilisation",
   description: "Conditions générales d'utilisation du service OVP Connect : accès, utilisation des données, obligations et responsabilités.",
   alternates: {
     canonical: "https://ovppro.fr/cgu",

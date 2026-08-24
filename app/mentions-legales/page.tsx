@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Mentions légales — OVP Connect",
+  title: "Mentions légales",
   description: "Mentions légales du site ovppro.fr : éditeur, hébergement, propriété intellectuelle et droit applicable.",
   alternates: {
     canonical: "https://ovppro.fr/mentions-legales",
