@@ -52,56 +52,55 @@ export default function FormulaireClient() {
   };
 
   if (success) return (
-    <div style={{ minHeight: "100vh", background: "#f0faf5", display: "flex", alignItems: "center", justifyContent: "center", padding: "1rem", fontFamily: "system-ui, sans-serif" }}>
-      <div style={{ background: "white", borderRadius: "16px", border: "0.5px solid #e5e7eb", padding: "3rem 2rem", maxWidth: "400px", textAlign: "center" }}>
-        <div style={{ width: "64px", height: "64px", background: "#d1fae5", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 1.5rem" }}>
-          <svg width="28" height="28" fill="none" stroke="#10b981" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+    <div style={{ minHeight: "100vh", background: "#F2EFE7", display: "flex", alignItems: "center", justifyContent: "center", padding: "1rem" }}>
+      <div style={{ background: "#FBFAF6", border: "1px solid #DDD7C9", padding: "3rem 2rem", maxWidth: "400px", textAlign: "center" }}>
+        <div style={{ width: "56px", height: "56px", background: "rgba(74,93,69,0.12)", border: "1px solid #4A5D45", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 1.5rem", color: "#4A5D45", fontSize: "22px" }}>
+          ✓
         </div>
-        <h2 style={{ fontSize: "20px", fontWeight: 500, color: "#111", marginBottom: "0.75rem" }}>Demande envoyée !</h2>
-        <div style={{ background: "#fef3c7", border: "0.5px solid #f59e0b", borderRadius: "8px", padding: "1rem", marginBottom: "1rem" }}>
-          <p style={{ fontSize: "14px", color: "#92400e", fontWeight: 500, marginBottom: "4px" }}>📧 Vérifiez votre boîte email</p>
-          <p style={{ fontSize: "13px", color: "#92400e", lineHeight: 1.6 }}>Nous vous avons envoyé un email de confirmation. Cliquez sur le lien pour activer votre demande et être mis en relation avec un professionnel.</p>
+        <h2 style={{ fontSize: "19px", fontWeight: 700, color: "#241F1A", marginBottom: "0.75rem" }}>Demande envoyée</h2>
+        <div style={{ background: "#F2EFE7", border: "1px solid #DDD7C9", padding: "1rem", marginBottom: "1rem" }}>
+          <p style={{ fontSize: "14px", color: "#241F1A", fontWeight: 600, marginBottom: "4px" }}>Vérifiez votre boîte mail</p>
+          <p style={{ fontSize: "13px", color: "#6B5F4F", lineHeight: 1.6 }}>Nous vous avons envoyé un email de confirmation. Cliquez sur le lien pour activer votre demande et être mis en relation avec un professionnel.</p>
         </div>
-        <p style={{ fontSize: "12px", color: "#9ca3af" }}>Vérifiez également vos spams si vous ne trouvez pas l'email.</p>
+        <p style={{ fontSize: "12px", color: "#8A7F6E" }}>Pensez aussi à vérifier vos spams.</p>
       </div>
     </div>
   );
 
   return (
-    <div style={{ minHeight: "100vh", background: "linear-gradient(135deg, #0a1628 0%, #0f2744 50%, #0a1628 100%)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "2rem 1rem", fontFamily: "system-ui, sans-serif" }}>
+    <div style={{ minHeight: "100vh", background: "#241F1A", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "2rem 1rem" }}>
       <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "10px", justifyContent: "center", marginBottom: "6px" }}>
-          <div style={{ width: "38px", height: "38px", background: "#10b981", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <svg width="20" height="20" fill="none" stroke="white" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+          <div style={{ width: "36px", height: "36px", background: "#4A5D45", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <svg width="18" height="18" fill="none" stroke="#F2EFE7" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
           </div>
-          <span style={{ fontSize: "22px", fontWeight: 500, color: "white" }}>OVP <span style={{ color: "#10b981" }}>Connect</span></span>
+          <span style={{ fontSize: "21px", fontWeight: 700, color: "#F2EFE7" }}>OVP <span style={{ color: "#8FAE86" }}>Connect</span></span>
         </div>
-        <p style={{ fontSize: "13px", color: "rgba(255,255,255,0.5)" }}>Trouvez votre bien et votre financement en un seul endroit</p>
+        <p style={{ fontSize: "13px", color: "rgba(242,239,231,0.55)" }}>Trouvez votre bien et votre financement en un seul endroit</p>
       </div>
 
       <div style={{ display: "flex", alignItems: "center", gap: "4px", marginBottom: "1.5rem" }}>
         {[{ n: 1, label: "Coordonnées" }, { n: 2, label: "Projet" }, { n: 3, label: "Situation" }, { n: 4, label: "Financement" }].map((s, i) => (
           <div key={s.n} style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-            {i > 0 && <div style={{ width: "24px", height: "1px", background: step > i ? "#10b981" : "#e5e7eb" }} />}
+            {i > 0 && <div style={{ width: "24px", height: "1px", background: step > i ? "#4A5D45" : "rgba(242,239,231,0.15)" }} />}
             <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
-              <div style={{ width: "28px", height: "28px", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: 500, background: step > s.n ? "#d1fae5" : step === s.n ? "#10b981" : "#f3f4f6", color: step > s.n ? "#059669" : step === s.n ? "white" : "#9ca3af", border: step > s.n ? "none" : step === s.n ? "none" : "0.5px solid #e5e7eb" }}>
-                {step > s.n ? <svg width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> : s.n}
+              <div style={{ width: "26px", height: "26px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: 600, background: step > s.n ? "rgba(74,93,69,0.25)" : step === s.n ? "#4A5D45" : "transparent", color: step > s.n ? "#8FAE86" : step === s.n ? "#F2EFE7" : "rgba(242,239,231,0.4)", border: step === s.n || step > s.n ? "none" : "1px solid rgba(242,239,231,0.25)" }}>
+                {step > s.n ? "✓" : s.n}
               </div>
-              <span style={{ fontSize: "11px", color: step === s.n ? "#059669" : "#9ca3af", fontWeight: step === s.n ? 500 : 400 }}>{s.label}</span>
+              <span style={{ fontSize: "11px", color: step === s.n ? "#8FAE86" : "rgba(242,239,231,0.4)", fontWeight: step === s.n ? 600 : 400 }}>{s.label}</span>
             </div>
           </div>
         ))}
       </div>
 
-      <div style={{ background: "white", borderRadius: "16px", border: "0.5px solid #e5e7eb", padding: "1.75rem", width: "100%", maxWidth: "460px" }}>
-        <div style={{ display: "inline-flex", alignItems: "center", gap: "5px", background: "#d1fae5", color: "#065f46", fontSize: "11px", padding: "3px 10px", borderRadius: "20px", fontWeight: 500, marginBottom: "1.25rem" }}>
-          <svg width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <div style={{ background: "#FBFAF6", border: "1px solid #DDD7C9", padding: "1.75rem", width: "100%", maxWidth: "460px" }}>
+        <div style={{ display: "inline-flex", alignItems: "center", gap: "5px", border: "1px solid #4A5D45", color: "#4A5D45", fontSize: "11px", padding: "3px 10px", fontWeight: 600, marginBottom: "1.25rem" }}>
           Données sécurisées — 100% gratuit
         </div>
 
         {step === 1 && (
           <div>
-            <p style={{ fontSize: "15px", fontWeight: 500, color: "#111", marginBottom: "1rem" }}>👤 Vos coordonnées</p>
+            <p style={{ fontSize: "15px", fontWeight: 700, color: "#241F1A", marginBottom: "1rem" }}>Vos coordonnées</p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "10px" }}>
               <div><label htmlFor="prenom" style={lbl}>Prénom *</label><input id="prenom" style={inp} placeholder="Jean" value={form.prenom} onChange={e => set("prenom", e.target.value)} /></div>
               <div><label htmlFor="nom" style={lbl}>Nom *</label><input id="nom" style={inp} placeholder="Dupont" value={form.nom} onChange={e => set("nom", e.target.value)} /></div>
@@ -116,10 +115,10 @@ export default function FormulaireClient() {
 
         {step === 2 && (
           <div>
-            <p style={{ fontSize: "15px", fontWeight: 500, color: "#111", marginBottom: "1rem" }}>🏠 Votre projet immobilier</p>
+            <p style={{ fontSize: "15px", fontWeight: 700, color: "#241F1A", marginBottom: "1rem" }}>Votre projet immobilier</p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "10px" }}>
               <div><label htmlFor="ville" style={lbl}>Ville *</label><input id="ville" style={inp} placeholder="Tours" value={form.ville} onChange={e => { set("ville", e.target.value); fetchCodePostal(e.target.value); }} /></div>
-              <div><label htmlFor="code_postal" style={lbl}>Code postal</label><input id="code_postal" style={{ ...inp, background: "#f9fafb" }} placeholder="Auto" value={form.code_postal} onChange={e => set("code_postal", e.target.value)} /></div>
+              <div><label htmlFor="code_postal" style={lbl}>Code postal</label><input id="code_postal" style={{ ...inp, background: "#F2EFE7" }} placeholder="Auto" value={form.code_postal} onChange={e => set("code_postal", e.target.value)} /></div>
             </div>
             <div style={{ marginBottom: "10px" }}><label htmlFor="type_bien" style={lbl}>Type de bien *</label>
               <select id="type_bien" style={inp} value={form.type_bien} onChange={e => set("type_bien", e.target.value)}>
@@ -150,7 +149,7 @@ export default function FormulaireClient() {
 
         {step === 3 && (
           <div>
-            <p style={{ fontSize: "15px", fontWeight: 500, color: "#111", marginBottom: "1rem" }}>👨‍👩‍👧 Votre situation personnelle</p>
+            <p style={{ fontSize: "15px", fontWeight: 700, color: "#241F1A", marginBottom: "1rem" }}>Votre situation personnelle</p>
             <div style={{ marginBottom: "10px" }}><label htmlFor="situation_familiale" style={lbl}>Situation familiale *</label>
               <select id="situation_familiale" style={inp} value={form.situation_familiale} onChange={e => set("situation_familiale", e.target.value)}>
                 <option value="">Sélectionner...</option>
@@ -181,8 +180,8 @@ export default function FormulaireClient() {
 
         {step === 4 && (
           <div>
-            <p style={{ fontSize: "15px", fontWeight: 500, color: "#111", marginBottom: "1rem" }}>💰 Situation financière</p>
-            <p style={{ fontSize: "12px", fontWeight: 500, color: "#10b981", marginBottom: "8px" }}>Emprunteur principal</p>
+            <p style={{ fontSize: "15px", fontWeight: 700, color: "#241F1A", marginBottom: "1rem" }}>Situation financière</p>
+            <p style={{ fontSize: "12px", fontWeight: 700, color: "#4A5D45", marginBottom: "8px" }}>Emprunteur principal</p>
             <div style={{ marginBottom: "10px" }}><label htmlFor="situation_pro" style={lbl}>Situation professionnelle *</label>
               <select id="situation_pro" style={inp} value={form.situation_pro} onChange={e => set("situation_pro", e.target.value)}>
                 <option value="">Sélectionner...</option>
@@ -196,8 +195,8 @@ export default function FormulaireClient() {
             <div style={{ marginBottom: "1rem" }}><label htmlFor="revenus_mensuels" style={lbl}>Revenus mensuels nets (€) *</label><input id="revenus_mensuels" style={inp} placeholder="3000" type="number" value={form.revenus_mensuels} onChange={e => set("revenus_mensuels", e.target.value)} /></div>
 
             {hasCoEmprunteur && (
-              <div style={{ borderTop: "0.5px solid #e5e7eb", paddingTop: "1rem", marginBottom: "1rem" }}>
-                <p style={{ fontSize: "12px", fontWeight: 500, color: "#10b981", marginBottom: "8px" }}>Co-emprunteur</p>
+              <div style={{ borderTop: "1px solid #DDD7C9", paddingTop: "1rem", marginBottom: "1rem" }}>
+                <p style={{ fontSize: "12px", fontWeight: 700, color: "#4A5D45", marginBottom: "8px" }}>Co-emprunteur</p>
                 <div style={{ marginBottom: "10px" }}><label htmlFor="situation_pro_2" style={lbl}>Situation professionnelle</label>
                   <select id="situation_pro_2" style={inp} value={form.situation_pro_2} onChange={e => set("situation_pro_2", e.target.value)}>
                     <option value="">Sélectionner...</option>
@@ -214,33 +213,31 @@ export default function FormulaireClient() {
 
             <div style={{ marginBottom: "10px" }}><label htmlFor="apport" style={lbl}>Apport disponible (€) *</label><input id="apport" style={inp} placeholder="20000" type="number" value={form.apport} onChange={e => set("apport", e.target.value)} /></div>
             <div style={{ marginBottom: "10px" }}><label htmlFor="message" style={lbl}>Message complémentaire (optionnel)</label><input id="message" style={inp} placeholder="Précisez votre projet..." value={form.message} onChange={e => set("message", e.target.value)} /></div>
-            <div style={{ marginBottom: "10px", fontSize: "11px", color: "#9ca3af" }}>
-              En soumettant ce formulaire, vous acceptez nos <a href="/cgu" style={{ color: "#10b981" }}>CGU</a> et notre <a href="/confidentialite" style={{ color: "#10b981" }}>politique de confidentialité</a>. Vos données seront transmises à des professionnels de l'immobilier de votre secteur.
+            <div style={{ marginBottom: "10px", fontSize: "11px", color: "#8A7F6E" }}>
+              En soumettant ce formulaire, vous acceptez nos <a href="/cgu" style={{ color: "#4A5D45" }}>CGU</a> et notre <a href="/confidentialite" style={{ color: "#4A5D45" }}>politique de confidentialité</a>. Vos données seront transmises à des professionnels de l'immobilier de votre secteur.
             </div>
             <div style={{ display: "flex", gap: "10px" }}>
               <button style={btnSecondary} onClick={() => setStep(3)}>← Retour</button>
               <button style={{ ...btn, opacity: (!form.situation_pro || !form.revenus_mensuels || !form.apport || loading) ? 0.4 : 1, flex: 2 }}
                 disabled={!form.situation_pro || !form.revenus_mensuels || !form.apport || loading}
                 onClick={handleSubmit}>
-                {loading ? "Envoi en cours..." : "Envoyer ma demande ✓"}
+                {loading ? "Envoi en cours..." : "Envoyer ma demande"}
               </button>
             </div>
           </div>
         )}
       </div>
 
-      <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginTop: "1.25rem" }}>
-        {[{ icon: "🔒", text: "Données protégées" }, { icon: "✅", text: "Pros certifiés" }, { icon: "💚", text: "100% gratuit" }].map(t => (
-          <div key={t.text} style={{ display: "flex", alignItems: "center", gap: "5px", fontSize: "11px", color: "rgba(255,255,255,0.4)" }}>
-            <span>{t.icon}</span>{t.text}
-          </div>
+      <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginTop: "1.25rem", flexWrap: "wrap", justifyContent: "center" }}>
+        {["Données protégées", "Pros certifiés", "100% gratuit"].map(t => (
+          <div key={t} style={{ fontSize: "11px", color: "rgba(242,239,231,0.4)" }}>{t}</div>
         ))}
       </div>
     </div>
   );
 }
 
-const lbl: React.CSSProperties = { fontSize: "13px", color: "#374151", display: "block", marginBottom: "6px", fontWeight: 500 };
-const inp: React.CSSProperties = { width: "100%", height: "42px", border: "1.5px solid #d1d5db", borderRadius: "8px", padding: "0 12px", fontSize: "14px", color: "#111", background: "white", outline: "none" };
-const btn: React.CSSProperties = { flex: 1, height: "44px", background: "#059669", color: "white", border: "none", borderRadius: "8px", fontSize: "15px", fontWeight: 600, cursor: "pointer", width: "100%" };
-const btnSecondary: React.CSSProperties = { flex: 1, height: "44px", background: "white", color: "#374151", border: "1.5px solid #d1d5db", borderRadius: "8px", fontSize: "14px", cursor: "pointer", fontWeight: 500 };
+const lbl: React.CSSProperties = { fontSize: "13px", color: "#4B4438", display: "block", marginBottom: "6px", fontWeight: 600 };
+const inp: React.CSSProperties = { width: "100%", height: "42px", border: "1px solid #DDD7C9", padding: "0 12px", fontSize: "14px", color: "#241F1A", background: "#FBFAF6", outline: "none", fontFamily: "inherit" };
+const btn: React.CSSProperties = { flex: 1, height: "44px", background: "#4A5D45", color: "#F2EFE7", border: "none", fontSize: "15px", fontWeight: 700, cursor: "pointer", width: "100%", fontFamily: "inherit" };
+const btnSecondary: React.CSSProperties = { flex: 1, height: "44px", background: "transparent", color: "#4B4438", border: "1px solid #DDD7C9", fontSize: "14px", cursor: "pointer", fontWeight: 600, fontFamily: "inherit" };
