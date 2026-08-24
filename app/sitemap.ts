@@ -15,6 +15,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: "https://ovppro.fr/achat-immobilier",
+      lastModified: "2026-08-24",
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://ovppro.fr/accompagnement-achat-immobilier",
+      lastModified: "2026-08-24",
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://ovppro.fr/financement-immobilier",
+      lastModified: "2026-08-24",
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://ovppro.fr/capacite-emprunt",
+      lastModified: "2026-08-24",
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://ovppro.fr/trouver-courtier-immobilier",
+      lastModified: "2026-08-24",
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: "https://ovppro.fr/trouver-agent-immobilier",
+      lastModified: "2026-08-24",
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
       url: "https://ovppro.fr/mentions-legales",
       lastModified: "2026-08-24",
       changeFrequency: "yearly",
