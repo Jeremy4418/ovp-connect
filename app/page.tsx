@@ -1,4 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "OVP Connect — Trouvez votre bien et votre financement",
+  description: "Déposez votre projet immobilier en quelques minutes. Un courtier analyse votre financement, un agent immobilier trouve votre bien idéal. 100% gratuit pour les acheteurs.",
+  alternates: {
+    canonical: "https://ovppro.fr",
+  },
+};
 
 export default function Home() {
   return (
