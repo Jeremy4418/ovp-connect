@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -13,6 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ovppro.fr"),
   title: "OVP Connect — Trouvez votre bien et votre financement",
   description: "Déposez votre projet immobilier en quelques minutes. Un courtier analyse votre financement, un agent immobilier trouve votre bien idéal. 100% gratuit pour les acheteurs.",
   keywords: "achat immobilier, courtier financement, agent immobilier, projet immobilier, crédit immobilier, mise en relation immobilière",
@@ -42,9 +44,6 @@ export const metadata: Metadata = {
     description: "Déposez votre projet immobilier en quelques minutes. 100% gratuit.",
     images: ["https://ovppro.fr/og-image.png"],
   },
-  alternates: {
-    canonical: "https://ovppro.fr",
-  },
   icons: {
     icon: "/favicon.ico",
     apple: "/favicon.png",
@@ -61,16 +60,21 @@ export default function RootLayout({
       lang="fr"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JRWFD2CWR"></script>
-        <script dangerouslySetInnerHTML={{ __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-6JRWFD2CWR');
-        `}} />
-      </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-6JRWFD2CWR"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-6JRWFD2CWR');
+          `}
+        </Script>
+        {children}
+      </body>
     </html>
   );
 }
