@@ -11,19 +11,19 @@ export const metadata: Metadata = {
 
 export default function MentionsLegales() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", background: "#f9fafb", minHeight: "100vh" }}>
-      <nav style={{ background: "#0a1628", padding: "1rem 2rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <Link href="/" style={{ display: "flex", alignItems: "center", gap: "8px", textDecoration: "none" }}>
-          <div style={{ width: "32px", height: "32px", background: "#10b981", borderRadius: "8px", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <svg width="16" height="16" fill="none" stroke="white" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
+    <div style={{ background: "#F2EFE7", minHeight: "100vh", color: "#241F1A" }}>
+      <nav style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 2rem", height: "64px", background: "#FBFAF6", borderBottom: "1px solid #DDD7C9" }}>
+        <Link href="/" style={{ display: "flex", alignItems: "center", gap: "8px", textDecoration: "none", color: "#241F1A", fontWeight: 700, fontSize: "16px" }}>
+          <div style={{ width: "30px", height: "30px", background: "#4A5D45", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <svg width="16" height="16" fill="none" stroke="#F2EFE7" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
           </div>
-          <span style={{ fontSize: "16px", fontWeight: 500, color: "white" }}>OVP <span style={{ color: "#10b981" }}>Connect</span></span>
+          OVP <span style={{ color: "#4A5D45" }}>Connect</span>
         </Link>
       </nav>
 
       <div style={{ maxWidth: "720px", margin: "0 auto", padding: "3rem 2rem" }}>
-        <h1 style={{ fontSize: "28px", fontWeight: 500, color: "#111", marginBottom: "0.5rem" }}>Mentions légales</h1>
-        <p style={{ fontSize: "13px", color: "#9ca3af", marginBottom: "2.5rem" }}>Dernière mise à jour : juin 2026</p>
+        <h1 style={{ fontSize: "27px", fontWeight: 800, color: "#241F1A", marginBottom: "0.5rem" }}>Mentions légales</h1>
+        <p style={{ fontSize: "13px", color: "#8A7F6E", marginBottom: "2.5rem" }}>Dernière mise à jour : août 2026</p>
 
         {[
           {
@@ -56,15 +56,15 @@ export default function MentionsLegales() {
           },
         ].map(s => (
           <div key={s.title} style={{ marginBottom: "2rem" }}>
-            <h2 style={{ fontSize: "16px", fontWeight: 500, color: "#111", marginBottom: "0.75rem" }}>{s.title}</h2>
-            <p style={{ fontSize: "14px", color: "#4b5563", lineHeight: 1.8, whiteSpace: "pre-line" }}>{s.content}</p>
+            <h2 style={{ fontSize: "16px", fontWeight: 700, color: "#241F1A", marginBottom: "0.75rem" }}>{s.title}</h2>
+            <p style={{ fontSize: "14px", color: "#4B4438", lineHeight: 1.8, whiteSpace: "pre-line" }}>{s.content}</p>
           </div>
         ))}
 
-        <div style={{ borderTop: "0.5px solid #e5e7eb", paddingTop: "1.5rem", display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
-          <Link href="/cgu" style={{ fontSize: "13px", color: "#10b981", textDecoration: "none" }}>Conditions générales d'utilisation</Link>
-          <Link href="/confidentialite" style={{ fontSize: "13px", color: "#10b981", textDecoration: "none" }}>Politique de confidentialité</Link>
-          <Link href="/" style={{ fontSize: "13px", color: "#6b7280", textDecoration: "none" }}>← Retour à l'accueil</Link>
+        <div style={{ borderTop: "1px solid #DDD7C9", paddingTop: "1.5rem", display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
+          <Link href="/cgu" style={{ fontSize: "13px", color: "#4A5D45", textDecoration: "none" }}>Conditions générales d'utilisation</Link>
+          <Link href="/confidentialite" style={{ fontSize: "13px", color: "#4A5D45", textDecoration: "none" }}>Politique de confidentialité</Link>
+          <Link href="/" style={{ fontSize: "13px", color: "#6B5F4F", textDecoration: "none" }}>← Retour à l'accueil</Link>
         </div>
       </div>
     </div>
