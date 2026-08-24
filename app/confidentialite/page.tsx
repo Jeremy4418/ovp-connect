@@ -1,4 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Politique de confidentialité — OVP Connect",
+  description: "Politique de confidentialité d'OVP Connect : données collectées, finalités, durée de conservation et vos droits RGPD.",
+  alternates: {
+    canonical: "https://ovppro.fr/confidentialite",
+  },
+};
 
 export default function Confidentialite() {
   return (
