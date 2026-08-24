@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Politique de confidentialité — OVP Connect",
+  title: "Politique de confidentialité",
   description: "Politique de confidentialité d'OVP Connect : données collectées, finalités, durée de conservation et vos droits RGPD.",
   alternates: {
     canonical: "https://ovppro.fr/confidentialite",
@@ -23,7 +23,7 @@ export default function Confidentialite() {
 
       <div style={{ maxWidth: "720px", margin: "0 auto", padding: "3rem 2rem" }}>
         <h1 style={{ fontSize: "28px", fontWeight: 500, color: "#111", marginBottom: "0.5rem" }}>Politique de confidentialité</h1>
-        <p style={{ fontSize: "13px", color: "#9ca3af", marginBottom: "2.5rem" }}>Dernière mise à jour : juin 2026</p>
+        <p style={{ fontSize: "13px", color: "#9ca3af", marginBottom: "2.5rem" }}>Dernière mise à jour : août 2026</p>
 
         {[
           {
@@ -55,8 +55,8 @@ export default function Confidentialite() {
             content: `Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, vous disposez des droits suivants :\n— Droit d'accès à vos données\n— Droit de rectification\n— Droit à l'effacement (droit à l'oubli)\n— Droit d'opposition au traitement\n— Droit à la portabilité de vos données\n— Droit à la limitation du traitement\n\nPour exercer ces droits, contactez-nous à : contact@optimisez-votre-pret.fr`
           },
           {
-            title: "8. Cookies",
-            content: `Le site ovppro.fr utilise des cookies techniques nécessaires au bon fonctionnement du site. Aucun cookie publicitaire ou de tracking n'est utilisé.`
+            title: "8. Cookies et mesure d'audience",
+            content: `Le site ovppro.fr utilise des cookies techniques nécessaires à son bon fonctionnement.\n\nLe site utilise également Google Analytics, un outil de mesure d'audience qui permet d'analyser la fréquentation du site (pages visitées, provenance des visiteurs, durée de visite). Ces données sont traitées par Google et peuvent donner lieu à un transfert hors de l'Union européenne, encadré par les clauses contractuelles types de Google.\n\nAucune donnée collectée via Google Analytics n'est utilisée à des fins publicitaires par OVP Connect.`
           },
           {
             title: "9. Sécurité",
