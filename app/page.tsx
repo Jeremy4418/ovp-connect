@@ -2,8 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "OVP Connect — Trouvez votre bien et votre financement",
-  description: "Déposez votre projet immobilier en quelques minutes. Un courtier analyse votre financement, un agent immobilier trouve votre bien idéal. 100% gratuit pour les acheteurs.",
+  description: "Déposez gratuitement votre projet immobilier et soyez mis en relation avec des professionnels pour votre recherche de bien et votre financement.",
   alternates: {
     canonical: "https://ovppro.fr",
   },
@@ -152,6 +151,29 @@ export default function Home() {
                 <p style={{ fontSize: "13px", color: "#6b7280", lineHeight: 1.6 }}>{f.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* BLOC ÉDITORIAL SEO */}
+      <section style={{ padding: "5rem 2rem", background: "white", borderTop: "0.5px solid #e5e7eb" }}>
+        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+          <h2 style={{ fontSize: "clamp(22px, 3vw, 30px)", fontWeight: 600, color: "#0a1628", letterSpacing: "-0.5px", marginBottom: "1.5rem" }}>
+            Pourquoi préparer son financement avant de chercher un bien ?
+          </h2>
+          <div style={{ fontSize: "15px", color: "#4b5563", lineHeight: 1.85 }}>
+            <p style={{ marginBottom: "1.25rem" }}>
+              Beaucoup d'acheteurs commencent leur projet immobilier par la recherche d'un bien, avant même de connaître leur capacité d'emprunt réelle. Cette approche mène souvent à des visites pour des biens finalement inaccessibles, ou à des délais qui s'allongent une fois le financement abordé trop tard dans le processus.
+            </p>
+            <p style={{ marginBottom: "1.25rem" }}>
+              Connaître son budget avant de rechercher un bien change tout. Un courtier en financement peut évaluer votre capacité d'emprunt en tenant compte de vos revenus, de votre apport et de votre situation professionnelle, pour vous donner une fourchette réaliste. Vous savez alors précisément dans quelle gamme de prix chercher, ce qui rend chaque visite plus pertinente et chaque offre plus crédible aux yeux des vendeurs.
+            </p>
+            <p style={{ marginBottom: "1.25rem" }}>
+              C'est tout l'intérêt de coordonner recherche de bien et financement dès le départ. Plutôt que de gérer séparément un agent immobilier et un courtier, sans lien entre les deux démarches, OVP Connect permet de déposer un seul projet et d'être mis en relation simultanément avec un professionnel du financement et un professionnel de l'immobilier. Chacun dispose des mêmes informations dès le départ, ce qui simplifie les échanges et accélère la concrétisation du projet.
+            </p>
+            <p>
+              Ce service de mise en relation est entièrement gratuit pour les acheteurs, sans engagement ni commission. L'objectif est simple : vous faire gagner du temps sur un projet qui, dans la réalité, mobilise souvent plusieurs interlocuteurs difficiles à coordonner seul.
+            </p>
           </div>
         </div>
       </section>
