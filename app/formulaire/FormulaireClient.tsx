@@ -103,11 +103,11 @@ export default function FormulaireClient() {
           <div>
             <p style={{ fontSize: "15px", fontWeight: 500, color: "#111", marginBottom: "1rem" }}>👤 Vos coordonnées</p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "10px" }}>
-              <div><label style={lbl}>Prénom *</label><input style={inp} placeholder="Jean" value={form.prenom} onChange={e => set("prenom", e.target.value)} /></div>
-              <div><label style={lbl}>Nom *</label><input style={inp} placeholder="Dupont" value={form.nom} onChange={e => set("nom", e.target.value)} /></div>
+              <div><label htmlFor="prenom" style={lbl}>Prénom *</label><input id="prenom" style={inp} placeholder="Jean" value={form.prenom} onChange={e => set("prenom", e.target.value)} /></div>
+              <div><label htmlFor="nom" style={lbl}>Nom *</label><input id="nom" style={inp} placeholder="Dupont" value={form.nom} onChange={e => set("nom", e.target.value)} /></div>
             </div>
-            <div style={{ marginBottom: "10px" }}><label style={lbl}>Email *</label><input style={inp} placeholder="jean.dupont@email.fr" type="email" value={form.email} onChange={e => set("email", e.target.value)} /></div>
-            <div style={{ marginBottom: "1rem" }}><label style={lbl}>Téléphone *</label><input style={inp} placeholder="06 00 00 00 00" type="tel" value={form.telephone} onChange={e => set("telephone", e.target.value)} /></div>
+            <div style={{ marginBottom: "10px" }}><label htmlFor="email" style={lbl}>Email *</label><input id="email" style={inp} placeholder="jean.dupont@email.fr" type="email" value={form.email} onChange={e => set("email", e.target.value)} /></div>
+            <div style={{ marginBottom: "1rem" }}><label htmlFor="telephone" style={lbl}>Téléphone *</label><input id="telephone" style={inp} placeholder="06 00 00 00 00" type="tel" value={form.telephone} onChange={e => set("telephone", e.target.value)} /></div>
             <button style={{ ...btn, opacity: (!form.prenom || !form.nom || !form.email || !form.telephone) ? 0.4 : 1 }}
               disabled={!form.prenom || !form.nom || !form.email || !form.telephone}
               onClick={() => setStep(2)}>Suivant →</button>
@@ -118,27 +118,27 @@ export default function FormulaireClient() {
           <div>
             <p style={{ fontSize: "15px", fontWeight: 500, color: "#111", marginBottom: "1rem" }}>🏠 Votre projet immobilier</p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "10px" }}>
-              <div><label style={lbl}>Ville *</label><input style={inp} placeholder="Tours" value={form.ville} onChange={e => { set("ville", e.target.value); fetchCodePostal(e.target.value); }} /></div>
-              <div><label style={lbl}>Code postal</label><input style={{ ...inp, background: "#f9fafb" }} placeholder="Auto" value={form.code_postal} onChange={e => set("code_postal", e.target.value)} /></div>
+              <div><label htmlFor="ville" style={lbl}>Ville *</label><input id="ville" style={inp} placeholder="Tours" value={form.ville} onChange={e => { set("ville", e.target.value); fetchCodePostal(e.target.value); }} /></div>
+              <div><label htmlFor="code_postal" style={lbl}>Code postal</label><input id="code_postal" style={{ ...inp, background: "#f9fafb" }} placeholder="Auto" value={form.code_postal} onChange={e => set("code_postal", e.target.value)} /></div>
             </div>
-            <div style={{ marginBottom: "10px" }}><label style={lbl}>Type de bien *</label>
-              <select style={inp} value={form.type_bien} onChange={e => set("type_bien", e.target.value)}>
+            <div style={{ marginBottom: "10px" }}><label htmlFor="type_bien" style={lbl}>Type de bien *</label>
+              <select id="type_bien" style={inp} value={form.type_bien} onChange={e => set("type_bien", e.target.value)}>
                 <option value="">Sélectionner...</option>
                 <option>Appartement</option><option>Maison</option><option>Terrain</option><option>Immeuble</option><option>Local commercial</option>
               </select>
             </div>
-            <div style={{ marginBottom: "10px" }}><label style={lbl}>État du bien *</label>
-              <select style={inp} value={form.etat_bien} onChange={e => set("etat_bien", e.target.value)}>
+            <div style={{ marginBottom: "10px" }}><label htmlFor="etat_bien" style={lbl}>État du bien *</label>
+              <select id="etat_bien" style={inp} value={form.etat_bien} onChange={e => set("etat_bien", e.target.value)}>
                 <option value="">Sélectionner...</option>
                 <option value="neuf">Neuf</option><option value="ancien">Ancien</option><option value="les_deux">Peu importe</option>
               </select>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "10px", marginBottom: "10px" }}>
-              <div><label style={lbl}>Surface min. (m²)</label><input style={inp} placeholder="60" type="number" value={form.surface} onChange={e => set("surface", e.target.value)} /></div>
-              <div><label style={lbl}>Pièces min.</label><input style={inp} placeholder="3" type="number" value={form.nb_pieces} onChange={e => set("nb_pieces", e.target.value)} /></div>
-              <div><label style={lbl}>Chambres min.</label><input style={inp} placeholder="2" type="number" value={form.nb_chambres} onChange={e => set("nb_chambres", e.target.value)} /></div>
+              <div><label htmlFor="surface" style={lbl}>Surface min. (m²)</label><input id="surface" style={inp} placeholder="60" type="number" value={form.surface} onChange={e => set("surface", e.target.value)} /></div>
+              <div><label htmlFor="nb_pieces" style={lbl}>Pièces min.</label><input id="nb_pieces" style={inp} placeholder="3" type="number" value={form.nb_pieces} onChange={e => set("nb_pieces", e.target.value)} /></div>
+              <div><label htmlFor="nb_chambres" style={lbl}>Chambres min.</label><input id="nb_chambres" style={inp} placeholder="2" type="number" value={form.nb_chambres} onChange={e => set("nb_chambres", e.target.value)} /></div>
             </div>
-            <div style={{ marginBottom: "1rem" }}><label style={lbl}>Budget maximum (€) *</label><input style={inp} placeholder="250000" type="number" value={form.budget} onChange={e => set("budget", e.target.value)} /></div>
+            <div style={{ marginBottom: "1rem" }}><label htmlFor="budget" style={lbl}>Budget maximum (€) *</label><input id="budget" style={inp} placeholder="250000" type="number" value={form.budget} onChange={e => set("budget", e.target.value)} /></div>
             <div style={{ display: "flex", gap: "10px" }}>
               <button style={btnSecondary} onClick={() => setStep(1)}>← Retour</button>
               <button style={{ ...btn, opacity: (!form.ville || !form.type_bien || !form.etat_bien || !form.budget) ? 0.4 : 1, flex: 2 }}
@@ -151,8 +151,8 @@ export default function FormulaireClient() {
         {step === 3 && (
           <div>
             <p style={{ fontSize: "15px", fontWeight: 500, color: "#111", marginBottom: "1rem" }}>👨‍👩‍👧 Votre situation personnelle</p>
-            <div style={{ marginBottom: "10px" }}><label style={lbl}>Situation familiale *</label>
-              <select style={inp} value={form.situation_familiale} onChange={e => set("situation_familiale", e.target.value)}>
+            <div style={{ marginBottom: "10px" }}><label htmlFor="situation_familiale" style={lbl}>Situation familiale *</label>
+              <select id="situation_familiale" style={inp} value={form.situation_familiale} onChange={e => set("situation_familiale", e.target.value)}>
                 <option value="">Sélectionner...</option>
                 <option value="seul">Seul(e)</option>
                 <option value="couple">En couple (co-emprunteur)</option>
@@ -160,8 +160,8 @@ export default function FormulaireClient() {
                 <option value="colocation">Colocation</option>
               </select>
             </div>
-            <div style={{ marginBottom: "1rem" }}><label style={lbl}>Délai de votre projet *</label>
-              <select style={inp} value={form.delai_projet} onChange={e => set("delai_projet", e.target.value)}>
+            <div style={{ marginBottom: "1rem" }}><label htmlFor="delai_projet" style={lbl}>Délai de votre projet *</label>
+              <select id="delai_projet" style={inp} value={form.delai_projet} onChange={e => set("delai_projet", e.target.value)}>
                 <option value="">Sélectionner...</option>
                 <option value="urgent">Urgent (moins d'1 mois)</option>
                 <option value="3_mois">Dans les 3 mois</option>
@@ -183,8 +183,8 @@ export default function FormulaireClient() {
           <div>
             <p style={{ fontSize: "15px", fontWeight: 500, color: "#111", marginBottom: "1rem" }}>💰 Situation financière</p>
             <p style={{ fontSize: "12px", fontWeight: 500, color: "#10b981", marginBottom: "8px" }}>Emprunteur principal</p>
-            <div style={{ marginBottom: "10px" }}><label style={lbl}>Situation professionnelle *</label>
-              <select style={inp} value={form.situation_pro} onChange={e => set("situation_pro", e.target.value)}>
+            <div style={{ marginBottom: "10px" }}><label htmlFor="situation_pro" style={lbl}>Situation professionnelle *</label>
+              <select id="situation_pro" style={inp} value={form.situation_pro} onChange={e => set("situation_pro", e.target.value)}>
                 <option value="">Sélectionner...</option>
                 <option value="cdi">CDI</option><option value="cdd">CDD</option>
                 <option value="independant">Indépendant / Auto-entrepreneur</option>
@@ -193,13 +193,13 @@ export default function FormulaireClient() {
                 <option value="sans_emploi">Sans emploi</option>
               </select>
             </div>
-            <div style={{ marginBottom: "1rem" }}><label style={lbl}>Revenus mensuels nets (€) *</label><input style={inp} placeholder="3000" type="number" value={form.revenus_mensuels} onChange={e => set("revenus_mensuels", e.target.value)} /></div>
+            <div style={{ marginBottom: "1rem" }}><label htmlFor="revenus_mensuels" style={lbl}>Revenus mensuels nets (€) *</label><input id="revenus_mensuels" style={inp} placeholder="3000" type="number" value={form.revenus_mensuels} onChange={e => set("revenus_mensuels", e.target.value)} /></div>
 
             {hasCoEmprunteur && (
               <div style={{ borderTop: "0.5px solid #e5e7eb", paddingTop: "1rem", marginBottom: "1rem" }}>
                 <p style={{ fontSize: "12px", fontWeight: 500, color: "#10b981", marginBottom: "8px" }}>Co-emprunteur</p>
-                <div style={{ marginBottom: "10px" }}><label style={lbl}>Situation professionnelle</label>
-                  <select style={inp} value={form.situation_pro_2} onChange={e => set("situation_pro_2", e.target.value)}>
+                <div style={{ marginBottom: "10px" }}><label htmlFor="situation_pro_2" style={lbl}>Situation professionnelle</label>
+                  <select id="situation_pro_2" style={inp} value={form.situation_pro_2} onChange={e => set("situation_pro_2", e.target.value)}>
                     <option value="">Sélectionner...</option>
                     <option value="cdi">CDI</option><option value="cdd">CDD</option>
                     <option value="independant">Indépendant / Auto-entrepreneur</option>
@@ -208,12 +208,12 @@ export default function FormulaireClient() {
                     <option value="sans_emploi">Sans emploi</option>
                   </select>
                 </div>
-                <div style={{ marginBottom: "1rem" }}><label style={lbl}>Revenus mensuels nets (€)</label><input style={inp} placeholder="2000" type="number" value={form.revenus_mensuels_2} onChange={e => set("revenus_mensuels_2", e.target.value)} /></div>
+                <div style={{ marginBottom: "1rem" }}><label htmlFor="revenus_mensuels_2" style={lbl}>Revenus mensuels nets (€)</label><input id="revenus_mensuels_2" style={inp} placeholder="2000" type="number" value={form.revenus_mensuels_2} onChange={e => set("revenus_mensuels_2", e.target.value)} /></div>
               </div>
             )}
 
-            <div style={{ marginBottom: "10px" }}><label style={lbl}>Apport disponible (€) *</label><input style={inp} placeholder="20000" type="number" value={form.apport} onChange={e => set("apport", e.target.value)} /></div>
-            <div style={{ marginBottom: "10px" }}><label style={lbl}>Message complémentaire (optionnel)</label><input style={inp} placeholder="Précisez votre projet..." value={form.message} onChange={e => set("message", e.target.value)} /></div>
+            <div style={{ marginBottom: "10px" }}><label htmlFor="apport" style={lbl}>Apport disponible (€) *</label><input id="apport" style={inp} placeholder="20000" type="number" value={form.apport} onChange={e => set("apport", e.target.value)} /></div>
+            <div style={{ marginBottom: "10px" }}><label htmlFor="message" style={lbl}>Message complémentaire (optionnel)</label><input id="message" style={inp} placeholder="Précisez votre projet..." value={form.message} onChange={e => set("message", e.target.value)} /></div>
             <div style={{ marginBottom: "10px", fontSize: "11px", color: "#9ca3af" }}>
               En soumettant ce formulaire, vous acceptez nos <a href="/cgu" style={{ color: "#10b981" }}>CGU</a> et notre <a href="/confidentialite" style={{ color: "#10b981" }}>politique de confidentialité</a>. Vos données seront transmises à des professionnels de l'immobilier de votre secteur.
             </div>
