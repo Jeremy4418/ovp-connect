@@ -155,6 +155,31 @@ export default function Home() {
         </div>
       </section>
 
+      {/* RESSOURCES / MAILLAGE INTERNE */}
+      <section style={{ padding: "5rem 2rem", background: "#fafafa" }}>
+        <div style={{ maxWidth: "800px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+            <div style={{ fontSize: "12px", color: "#10b981", fontWeight: 600, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "1rem" }}>Ressources</div>
+            <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 600, color: "#0a1628", letterSpacing: "-0.5px" }}>Pour aller plus loin</h2>
+          </div>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1rem" }}>
+            {[
+              { href: "/achat-immobilier", title: "Le parcours d'achat immobilier", desc: "Les grandes étapes, de la définition du projet à la signature." },
+              { href: "/accompagnement-achat-immobilier", title: "Notre accompagnement", desc: "Comment fonctionne le double accompagnement OVP Connect." },
+              { href: "/financement-immobilier", title: "Le financement immobilier", desc: "Comprendre les étapes et le rôle du courtier." },
+              { href: "/capacite-emprunt", title: "Calculer sa capacité d'emprunt", desc: "Les facteurs qui déterminent votre budget." },
+              { href: "/trouver-courtier-immobilier", title: "Trouver un courtier immobilier", desc: "Comment être mis en relation avec un courtier fiable." },
+              { href: "/trouver-agent-immobilier", title: "Trouver un agent immobilier", desc: "Comment être mis en relation avec un agent de votre secteur." },
+            ].map(l => (
+              <Link key={l.href} href={l.href} style={{ display: "block", background: "white", border: "0.5px solid #e5e7eb", borderRadius: "12px", padding: "1.25rem", textDecoration: "none" }}>
+                <p style={{ fontSize: "14px", fontWeight: 600, color: "#0a1628", marginBottom: "0.4rem" }}>{l.title}</p>
+                <p style={{ fontSize: "13px", color: "#6b7280", lineHeight: 1.6 }}>{l.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* BLOC ÉDITORIAL SEO */}
       <section style={{ padding: "5rem 2rem", background: "white", borderTop: "0.5px solid #e5e7eb" }}>
         <div style={{ maxWidth: "700px", margin: "0 auto" }}>
