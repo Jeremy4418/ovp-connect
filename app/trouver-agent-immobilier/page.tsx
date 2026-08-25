@@ -14,9 +14,7 @@ export default function TrouverAgent() {
     <div style={{ background: "#F2EFE7", minHeight: "100vh", color: "#241F1A" }}>
       <nav style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 2rem", height: "64px", background: "#FBFAF6", borderBottom: "1px solid #DDD7C9" }}>
         <Link href="/" style={{ display: "flex", alignItems: "center", gap: "8px", textDecoration: "none", color: "#241F1A", fontWeight: 700, fontSize: "16px" }}>
-          <div style={{ width: "30px", height: "30px", background: "#4A5D45", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <svg width="16" height="16" fill="none" stroke="#F2EFE7" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
-          </div>
+          <img src="/favicon.png" alt="OVP Connect" width={30} height={30} style={{ display: "block" }} />
           OVP <span style={{ color: "#4A5D45" }}>Connect</span>
         </Link>
         <Link href="/formulaire" style={{ background: "#4A5D45", color: "#F2EFE7", padding: "0 18px", height: "36px", fontSize: "13px", fontWeight: 600, display: "inline-flex", alignItems: "center", textDecoration: "none" }}>
