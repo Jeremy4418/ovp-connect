@@ -71,9 +71,7 @@ export default function FormulaireClient() {
     <div style={{ minHeight: "100vh", background: "#241F1A", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "2rem 1rem" }}>
       <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "10px", justifyContent: "center", marginBottom: "6px" }}>
-          <div style={{ width: "36px", height: "36px", background: "#4A5D45", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <svg width="18" height="18" fill="none" stroke="#F2EFE7" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
-          </div>
+          <img src="/favicon.png" alt="OVP Connect" width={36} height={36} style={{ display: "block" }} />
           <span style={{ fontSize: "21px", fontWeight: 700, color: "#F2EFE7" }}>OVP <span style={{ color: "#8FAE86" }}>Connect</span></span>
         </div>
         <p style={{ fontSize: "13px", color: "rgba(242,239,231,0.55)" }}>Trouvez votre bien et votre financement en un seul endroit</p>
