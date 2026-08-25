@@ -15,9 +15,7 @@ export default function Home() {
       {/* NAV */}
       <nav style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 2rem", height: "68px", background: "#FBFAF6", borderBottom: "1px solid #DDD7C9" }}>
         <div style={{ display: "flex", alignItems: "center", gap: "10px", fontWeight: 700, fontSize: "17px", letterSpacing: "-0.2px" }}>
-          <div style={{ width: "34px", height: "34px", background: "#4A5D45", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <svg width="18" height="18" fill="none" stroke="#F2EFE7" strokeWidth="2" viewBox="0 0 24 24"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z"/><path d="M9 21V12h6v9"/></svg>
-          </div>
+          <img src="/favicon.png" alt="OVP Connect" width={34} height={34} style={{ display: "block" }} />
           OVP <span style={{ color: "#4A5D45" }}>Connect</span>
         </div>
         <Link href="/formulaire" style={{ background: "#4A5D45", color: "#F2EFE7", padding: "0 20px", height: "40px", fontSize: "14px", fontWeight: 600, display: "inline-flex", alignItems: "center", textDecoration: "none", gap: "6px" }}>
