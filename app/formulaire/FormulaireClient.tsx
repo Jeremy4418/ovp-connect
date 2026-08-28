@@ -127,7 +127,7 @@ export default function FormulaireClient() {
             <div style={{ marginBottom: "10px" }}><label htmlFor="etat_bien" style={lbl}>État du bien *</label>
               <select id="etat_bien" style={inp} value={form.etat_bien} onChange={e => set("etat_bien", e.target.value)}>
                 <option value="">Sélectionner...</option>
-                <option value="neuf">Neuf</option><option value="ancien">Ancien</option><option value="les_deux">Peu importe</option>
+                <option value="neuf">Neuf</option><option value="tres_bon_etat">Très bon état</option><option value="avec_travaux">Avec travaux</option><option value="peu_importe">Peu importe</option>
               </select>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "10px", marginBottom: "10px" }}>
