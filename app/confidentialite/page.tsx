@@ -62,7 +62,7 @@ export default function Confidentialite() {
           },
           {
             title: "8. Cookies et mesure d'audience",
-            content: `Le site ovppro.fr utilise des cookies techniques nécessaires à son bon fonctionnement.\n\nLe site utilise également Google Analytics, un outil de mesure d'audience qui permet d'analyser la fréquentation du site (pages visitées, provenance des visiteurs, durée de visite). Ces données sont traitées par Google et peuvent donner lieu à un transfert hors de l'Union européenne, encadré par les clauses contractuelles types de Google.\n\nAucune donnée collectée via Google Analytics n'est utilisée à des fins publicitaires par OVP Connect.`
+            content: `Le site ovppro.fr utilise des cookies techniques nécessaires à son bon fonctionnement.\n\nLe site utilise également Google Analytics, un outil de mesure d'audience qui permet d'analyser la fréquentation du site (pages visitées, provenance des visiteurs, durée de visite). Ce service n'est activé qu'après votre consentement, recueilli via le bandeau affiché lors de votre première visite. Vous pouvez à tout moment refuser ou retirer votre consentement.\n\nCes données sont traitées par Google et peuvent donner lieu à un transfert hors de l'Union européenne, encadré par les clauses contractuelles types de Google. Aucune donnée collectée via Google Analytics n'est utilisée à des fins publicitaires par OVP Connect.`
           },
           {
             title: "9. Sécurité",

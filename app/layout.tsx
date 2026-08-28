@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Archivo } from "next/font/google";
+import CookieConsent from "./CookieConsent";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -56,18 +57,6 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${archivo.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col" style={{ fontFamily: "var(--font-archivo), Arial, sans-serif" }}>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-6JRWFD2CWR"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-6JRWFD2CWR');
-          `}
-        </Script>
         <Script id="schema-website" type="application/ld+json" strategy="afterInteractive">
           {JSON.stringify({
             "@context": "https://schema.org",
@@ -88,6 +77,7 @@ export default function RootLayout({
           })}
         </Script>
         {children}
+        <CookieConsent />
       </body>
     </html>
   );
