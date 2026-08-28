@@ -5,6 +5,7 @@ export default function FormulaireClient() {
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [error, setError] = useState(false);
   const [form, setForm] = useState({
     prenom: "", nom: "", email: "", telephone: "",
     ville: "", code_postal: "",
@@ -40,14 +41,22 @@ export default function FormulaireClient() {
 
   const handleSubmit = async () => {
     setLoading(true);
+    setError(false);
     try {
       const res = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...form, co_emprunteur: hasCoEmprunteur })
       });
-      if (res.ok) setSuccess(true);
-    } catch (e) { console.error(e); }
+      if (res.ok) {
+        setSuccess(true);
+      } else {
+        setError(true);
+      }
+    } catch (e) {
+      console.error(e);
+      setError(true);
+    }
     setLoading(false);
   };
 
@@ -214,12 +223,18 @@ export default function FormulaireClient() {
             <div style={{ marginBottom: "10px", fontSize: "11px", color: "#8A7F6E" }}>
               En soumettant ce formulaire, vous acceptez nos <a href="/cgu" style={{ color: "#4A5D45" }}>CGU</a> et notre <a href="/confidentialite" style={{ color: "#4A5D45" }}>politique de confidentialité</a>. Vos données seront transmises à des professionnels de l'immobilier de votre secteur.
             </div>
+            {error && (
+              <div style={{ background: "#FBEAEA", border: "1px solid #8B3A3A", padding: "0.75rem 1rem", marginBottom: "1rem" }}>
+                <p style={{ fontSize: "13px", color: "#8B3A3A", fontWeight: 600, marginBottom: "2px" }}>L'envoi a échoué</p>
+                <p style={{ fontSize: "12px", color: "#8B3A3A", lineHeight: 1.5 }}>Une erreur est survenue. Vérifiez votre connexion et réessayez, ou contactez-nous si le problème persiste.</p>
+              </div>
+            )}
             <div style={{ display: "flex", gap: "10px" }}>
               <button style={btnSecondary} onClick={() => setStep(3)}>← Retour</button>
               <button style={{ ...btn, opacity: (!form.situation_pro || !form.revenus_mensuels || !form.apport || loading) ? 0.4 : 1, flex: 2 }}
                 disabled={!form.situation_pro || !form.revenus_mensuels || !form.apport || loading}
                 onClick={handleSubmit}>
-                {loading ? "Envoi en cours..." : "Envoyer ma demande"}
+                {loading ? "Envoi en cours..." : error ? "Réessayer" : "Envoyer ma demande"}
               </button>
             </div>
           </div>
