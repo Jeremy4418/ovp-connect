@@ -11,20 +11,34 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div style={{ background: "#F2EFE7", minHeight: "100vh", color: "#241F1A" }}>
+      <style>{`
+        @media (max-width: 640px) {
+          .ovp-nav { padding: 0 1rem !important; height: 58px !important; }
+          .ovp-nav-brand { font-size: 15px !important; gap: 8px !important; }
+          .ovp-nav-cta { padding: 0 14px !important; height: 34px !important; font-size: 12px !important; }
+          .ovp-section { padding: 3rem 1.25rem !important; }
+          .ovp-hero { padding: 3rem 1.25rem 2.5rem !important; }
+          .ovp-hero-cta { padding: 0 22px !important; height: 46px !important; font-size: 14px !important; }
+          .ovp-stats { flex-direction: column !important; gap: 1.25rem !important; margin-top: 3rem !important; padding-top: 2rem !important; }
+          .ovp-stats-item { padding: 0 !important; border-right: none !important; border-bottom: 1px solid #DDD7C9 !important; padding-bottom: 1.25rem !important; width: 100% !important; }
+          .ovp-stats-item:last-child { border-bottom: none !important; padding-bottom: 0 !important; }
+          .ovp-why-grid { grid-template-columns: 1fr !important; max-width: 100% !important; }
+        }
+      `}</style>
 
       {/* NAV */}
-      <nav style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 2rem", height: "68px", background: "#FBFAF6", borderBottom: "1px solid #DDD7C9" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: "10px", fontWeight: 700, fontSize: "17px", letterSpacing: "-0.2px" }}>
+      <nav className="ovp-nav" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 2rem", height: "68px", background: "#FBFAF6", borderBottom: "1px solid #DDD7C9" }}>
+        <div className="ovp-nav-brand" style={{ display: "flex", alignItems: "center", gap: "10px", fontWeight: 700, fontSize: "17px", letterSpacing: "-0.2px" }}>
           <img src="/favicon.png" alt="OVP Connect" width={34} height={34} style={{ display: "block" }} />
           OVP <span style={{ color: "#4A5D45" }}>Connect</span>
         </div>
-        <Link href="/formulaire" style={{ background: "#4A5D45", color: "#F2EFE7", padding: "0 20px", height: "40px", fontSize: "14px", fontWeight: 600, display: "inline-flex", alignItems: "center", textDecoration: "none", gap: "6px" }}>
+        <Link href="/formulaire" className="ovp-nav-cta" style={{ background: "#4A5D45", color: "#F2EFE7", padding: "0 20px", height: "40px", fontSize: "14px", fontWeight: 600, display: "inline-flex", alignItems: "center", textDecoration: "none", gap: "6px", whiteSpace: "nowrap" }}>
           Déposer mon projet →
         </Link>
       </nav>
 
       {/* HERO */}
-      <section style={{ padding: "6rem 2rem", textAlign: "center", borderBottom: "1px solid #DDD7C9" }}>
+      <section className="ovp-section ovp-hero" style={{ padding: "6rem 2rem", textAlign: "center", borderBottom: "1px solid #DDD7C9" }}>
         <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", border: "1px solid #4A5D45", color: "#4A5D45", fontSize: "12px", fontWeight: 600, letterSpacing: "0.06em", textTransform: "uppercase", padding: "6px 16px", marginBottom: "2rem" }}>
           100% gratuit pour les acheteurs
         </div>
@@ -39,20 +53,20 @@ export default function Home() {
         </p>
 
         <div style={{ display: "flex", gap: "12px", justifyContent: "center", flexWrap: "wrap" }}>
-          <Link href="/formulaire" style={{ background: "#4A5D45", color: "#F2EFE7", padding: "0 32px", height: "52px", fontSize: "15px", fontWeight: 600, display: "inline-flex", alignItems: "center", gap: "8px", textDecoration: "none" }}>
+          <Link href="/formulaire" className="ovp-hero-cta" style={{ background: "#4A5D45", color: "#F2EFE7", padding: "0 32px", height: "52px", fontSize: "15px", fontWeight: 600, display: "inline-flex", alignItems: "center", gap: "8px", textDecoration: "none" }}>
             Déposer mon projet gratuitement →
           </Link>
         </div>
         <p style={{ fontSize: "12px", color: "#8A7F6E", marginTop: "1.25rem" }}>Aucun engagement · Aucune commission · 100% gratuit</p>
 
         {/* Stats */}
-        <div style={{ display: "flex", justifyContent: "center", gap: "0", marginTop: "5rem", paddingTop: "3rem", borderTop: "1px solid #DDD7C9", flexWrap: "wrap" }}>
+        <div className="ovp-stats" style={{ display: "flex", justifyContent: "center", gap: "0", marginTop: "5rem", paddingTop: "3rem", borderTop: "1px solid #DDD7C9", flexWrap: "wrap" }}>
           {[
             { num: "100%", label: "Gratuit pour l'acheteur" },
             { num: "2", label: "Pros mobilisés pour vous" },
             { num: "3 min", label: "Pour déposer votre projet" },
           ].map((s, i) => (
-            <div key={s.num} style={{ textAlign: "center", padding: "0 3rem", borderRight: i < 2 ? "1px solid #DDD7C9" : "none" }}>
+            <div key={s.num} className="ovp-stats-item" style={{ textAlign: "center", padding: "0 3rem", borderRight: i < 2 ? "1px solid #DDD7C9" : "none" }}>
               <div style={{ fontSize: "32px", fontWeight: 800, letterSpacing: "-1px" }}>{s.num}</div>
               <div style={{ fontSize: "13px", color: "#6B5F4F", marginTop: "6px" }}>{s.label}</div>
             </div>
@@ -61,7 +75,7 @@ export default function Home() {
       </section>
 
       {/* COMMENT ÇA MARCHE */}
-      <section style={{ padding: "5rem 2rem" }}>
+      <section className="ovp-section" style={{ padding: "5rem 2rem" }}>
         <div style={{ maxWidth: "820px", margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <div style={{ fontSize: "12px", color: "#4A5D45", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.75rem" }}>Comment ça marche</div>
@@ -86,7 +100,7 @@ export default function Home() {
       </section>
 
       {/* DOUBLE ACCOMPAGNEMENT */}
-      <section style={{ padding: "5rem 2rem", borderTop: "1px solid #DDD7C9", borderBottom: "1px solid #DDD7C9" }}>
+      <section className="ovp-section" style={{ padding: "5rem 2rem", borderTop: "1px solid #DDD7C9", borderBottom: "1px solid #DDD7C9" }}>
         <div style={{ maxWidth: "820px", margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <div style={{ fontSize: "12px", color: "#4A5D45", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.75rem" }}>Double accompagnement</div>
@@ -124,11 +138,11 @@ export default function Home() {
       </section>
 
       {/* POURQUOI */}
-      <section style={{ padding: "5rem 2rem" }}>
+      <section className="ovp-section" style={{ padding: "5rem 2rem" }}>
         <div style={{ maxWidth: "820px", margin: "0 auto", textAlign: "center" }}>
           <div style={{ fontSize: "12px", color: "#4A5D45", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.75rem" }}>Pourquoi OVP Connect</div>
           <h2 style={{ fontSize: "clamp(24px, 3vw, 34px)", fontWeight: 700, letterSpacing: "-0.5px", marginBottom: "3rem" }}>Tout ce dont vous avez besoin</h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1px", background: "#DDD7C9", border: "1px solid #DDD7C9", maxWidth: "620px", margin: "0 auto" }}>
+          <div className="ovp-why-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1px", background: "#DDD7C9", border: "1px solid #DDD7C9", maxWidth: "620px", margin: "0 auto" }}>
             {[
               { title: "Données sécurisées", desc: "Vos informations sont protégées et transmises uniquement aux professionnels de votre zone." },
               { title: "Pros de votre secteur", desc: "Mise en relation avec des professionnels qui interviennent dans votre zone géographique." },
@@ -145,7 +159,7 @@ export default function Home() {
       </section>
 
       {/* RESSOURCES / MAILLAGE INTERNE */}
-      <section style={{ padding: "5rem 2rem", borderTop: "1px solid #DDD7C9" }}>
+      <section className="ovp-section" style={{ padding: "5rem 2rem", borderTop: "1px solid #DDD7C9" }}>
         <div style={{ maxWidth: "820px", margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <div style={{ fontSize: "12px", color: "#4A5D45", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.75rem" }}>Ressources</div>
@@ -170,7 +184,7 @@ export default function Home() {
       </section>
 
       {/* BLOC ÉDITORIAL SEO */}
-      <section style={{ padding: "5rem 2rem", borderTop: "1px solid #DDD7C9" }}>
+      <section className="ovp-section" style={{ padding: "5rem 2rem", borderTop: "1px solid #DDD7C9" }}>
         <div style={{ maxWidth: "700px", margin: "0 auto" }}>
           <h2 style={{ fontSize: "clamp(22px, 3vw, 30px)", fontWeight: 700, letterSpacing: "-0.5px", marginBottom: "1.5rem" }}>
             Pourquoi préparer son financement avant de chercher un bien
@@ -193,7 +207,7 @@ export default function Home() {
       </section>
 
       {/* CTA FINAL */}
-      <section style={{ background: "#4A5D45", color: "#F2EFE7", padding: "5rem 2rem", textAlign: "center" }}>
+      <section className="ovp-section" style={{ background: "#4A5D45", color: "#F2EFE7", padding: "5rem 2rem", textAlign: "center" }}>
         <h2 style={{ fontSize: "clamp(28px, 4vw, 42px)", fontWeight: 800, marginBottom: "1rem", letterSpacing: "-0.5px" }}>Prêt à concrétiser<br />votre projet ?</h2>
         <p style={{ fontSize: "15px", color: "rgba(242,239,231,0.75)", marginBottom: "2rem", maxWidth: "380px", margin: "0 auto 2rem", lineHeight: 1.7 }}>
           Rejoignez les acheteurs qui font confiance à OVP Connect pour trouver leur bien et leur financement.
