@@ -86,21 +86,30 @@ export default function FormulaireClient() {
         <p style={{ fontSize: "13px", color: "rgba(242,239,231,0.55)" }}>Trouvez votre bien et votre financement en un seul endroit</p>
       </div>
 
+      <style>{`
+        @media (max-width: 480px) {
+          .ovp-step-label { display: none !important; }
+          .ovp-step-connector { width: 12px !important; }
+          .ovp-form-card { padding: 1.25rem !important; }
+          .ovp-form-grid-3 { grid-template-columns: 1fr 1fr !important; }
+        }
+      `}</style>
+
       <div style={{ display: "flex", alignItems: "center", gap: "4px", marginBottom: "1.5rem" }}>
         {[{ n: 1, label: "Coordonnées" }, { n: 2, label: "Projet" }, { n: 3, label: "Situation" }, { n: 4, label: "Financement" }].map((s, i) => (
           <div key={s.n} style={{ display: "flex", alignItems: "center", gap: "4px" }}>
-            {i > 0 && <div style={{ width: "24px", height: "1px", background: step > i ? "#4A5D45" : "rgba(242,239,231,0.15)" }} />}
+            {i > 0 && <div className="ovp-step-connector" style={{ width: "24px", height: "1px", background: step > i ? "#4A5D45" : "rgba(242,239,231,0.15)" }} />}
             <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
               <div style={{ width: "26px", height: "26px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "12px", fontWeight: 600, background: step > s.n ? "rgba(74,93,69,0.25)" : step === s.n ? "#4A5D45" : "transparent", color: step > s.n ? "#8FAE86" : step === s.n ? "#F2EFE7" : "rgba(242,239,231,0.4)", border: step === s.n || step > s.n ? "none" : "1px solid rgba(242,239,231,0.25)" }}>
                 {step > s.n ? "✓" : s.n}
               </div>
-              <span style={{ fontSize: "11px", color: step === s.n ? "#8FAE86" : "rgba(242,239,231,0.4)", fontWeight: step === s.n ? 600 : 400 }}>{s.label}</span>
+              <span className="ovp-step-label" style={{ fontSize: "11px", color: step === s.n ? "#8FAE86" : "rgba(242,239,231,0.4)", fontWeight: step === s.n ? 600 : 400 }}>{s.label}</span>
             </div>
           </div>
         ))}
       </div>
 
-      <div style={{ background: "#FBFAF6", border: "1px solid #DDD7C9", padding: "1.75rem", width: "100%", maxWidth: "460px" }}>
+      <div className="ovp-form-card" style={{ background: "#FBFAF6", border: "1px solid #DDD7C9", padding: "1.75rem", width: "100%", maxWidth: "460px" }}>
         <div style={{ display: "inline-flex", alignItems: "center", gap: "5px", border: "1px solid #4A5D45", color: "#4A5D45", fontSize: "11px", padding: "3px 10px", fontWeight: 600, marginBottom: "1.25rem" }}>
           Données sécurisées — 100% gratuit
         </div>
@@ -139,7 +148,7 @@ export default function FormulaireClient() {
                 <option value="neuf">Neuf</option><option value="tres_bon_etat">Très bon état</option><option value="avec_travaux">Avec travaux</option><option value="peu_importe">Peu importe</option>
               </select>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "10px", marginBottom: "10px" }}>
+            <div className="ovp-form-grid-3" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "10px", marginBottom: "10px" }}>
               <div><label htmlFor="surface" style={lbl}>Surface min. (m²)</label><input id="surface" style={inp} placeholder="60" type="number" value={form.surface} onChange={e => set("surface", e.target.value)} /></div>
               <div><label htmlFor="nb_pieces" style={lbl}>Pièces min.</label><input id="nb_pieces" style={inp} placeholder="3" type="number" value={form.nb_pieces} onChange={e => set("nb_pieces", e.target.value)} /></div>
               <div><label htmlFor="nb_chambres" style={lbl}>Chambres min.</label><input id="nb_chambres" style={inp} placeholder="2" type="number" value={form.nb_chambres} onChange={e => set("nb_chambres", e.target.value)} /></div>

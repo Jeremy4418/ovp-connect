@@ -12,14 +12,22 @@ export const metadata: Metadata = {
 export default function CGU() {
   return (
     <div style={{ background: "#F2EFE7", minHeight: "100vh", color: "#241F1A" }}>
-      <nav style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 2rem", height: "64px", background: "#FBFAF6", borderBottom: "1px solid #DDD7C9" }}>
-        <Link href="/" style={{ display: "flex", alignItems: "center", gap: "8px", textDecoration: "none", color: "#241F1A", fontWeight: 700, fontSize: "16px" }}>
+      <style>{`
+        @media (max-width: 480px) {
+          .ovp-nav { padding: 0 1rem !important; }
+          .ovp-nav-brand { font-size: 14px !important; }
+          .ovp-nav-cta { padding: 0 12px !important; height: 32px !important; font-size: 11px !important; }
+          .ovp-content { padding: 2rem 1.25rem !important; }
+        }
+      `}</style>
+      <nav className="ovp-nav" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 2rem", height: "64px", background: "#FBFAF6", borderBottom: "1px solid #DDD7C9" }}>
+        <Link href="/" className="ovp-nav-brand" style={{ display: "flex", alignItems: "center", gap: "8px", textDecoration: "none", color: "#241F1A", fontWeight: 700, fontSize: "16px" }}>
           <img src="/favicon.png" alt="OVP Connect" width={30} height={30} style={{ display: "block" }} />
           OVP <span style={{ color: "#4A5D45" }}>Connect</span>
         </Link>
       </nav>
 
-      <div style={{ maxWidth: "720px", margin: "0 auto", padding: "3rem 2rem" }}>
+      <div className="ovp-content" style={{ maxWidth: "720px", margin: "0 auto", padding: "3rem 2rem" }}>
         <h1 style={{ fontSize: "27px", fontWeight: 800, color: "#241F1A", marginBottom: "0.5rem" }}>Conditions générales d'utilisation</h1>
         <p style={{ fontSize: "13px", color: "#8A7F6E", marginBottom: "2.5rem" }}>Dernière mise à jour : août 2026</p>
 
