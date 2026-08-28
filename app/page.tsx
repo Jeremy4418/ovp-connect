@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from "next/script";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -205,6 +206,106 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQ */}
+      <section className="ovp-section" style={{ padding: "5rem 2rem", borderTop: "1px solid #DDD7C9" }}>
+        <div style={{ maxWidth: "700px", margin: "0 auto" }}>
+          <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+            <div style={{ fontSize: "12px", color: "#4A5D45", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: "0.75rem" }}>Questions fréquentes</div>
+            <h2 style={{ fontSize: "clamp(24px, 3vw, 34px)", fontWeight: 700, letterSpacing: "-0.5px" }}>Ce qu'on nous demande le plus</h2>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1px", background: "#DDD7C9", border: "1px solid #DDD7C9" }}>
+            {[
+              {
+                q: "Le service est-il vraiment gratuit ?",
+                a: "Oui, entièrement gratuit pour les acheteurs, sans engagement ni commission. Les professionnels mis en relation (courtiers, agents) sont abonnés à la plateforme OVP Pro de leur côté.",
+              },
+              {
+                q: "Comment fonctionne la mise en relation avec un courtier et un agent ?",
+                a: "Un seul formulaire suffit. Une fois votre projet déposé et votre email confirmé, votre demande est transmise à un courtier en financement et un agent immobilier de votre secteur, qui vous contactent directement.",
+              },
+              {
+                q: "Dois-je déjà avoir trouvé un bien avant de déposer mon projet ?",
+                a: "Non, ce n'est pas nécessaire. Vous pouvez déposer votre projet même si vous n'avez pas encore commencé à visiter — l'agent immobilier vous aide justement dans cette recherche.",
+              },
+              {
+                q: "Sous combien de temps un professionnel me contacte-t-il ?",
+                a: "Les professionnels sont notifiés dès que votre demande est confirmée par email. Le délai de prise de contact dépend ensuite de leur disponibilité, mais la mise en relation est immédiate de notre côté.",
+              },
+              {
+                q: "Mes données sont-elles transmises à d'autres organismes ?",
+                a: "Vos données sont transmises uniquement aux professionnels de votre secteur abonnés à OVP Pro, dans le cadre strict de votre demande. Elles ne sont jamais revendues à des tiers.",
+              },
+              {
+                q: "OVP Connect intervient-il dans toute la France ?",
+                a: "La mise en relation dépend des professionnels abonnés à OVP Pro présents dans votre zone géographique. Le formulaire vous permet d'indiquer votre ville pour cibler les bons interlocuteurs.",
+              },
+            ].map(item => (
+              <div key={item.q} style={{ background: "#FBFAF6", padding: "1.5rem" }}>
+                <h3 style={{ fontSize: "15px", fontWeight: 700, marginBottom: "0.5rem" }}>{item.q}</h3>
+                <p style={{ fontSize: "14px", color: "#4B4438", lineHeight: 1.7 }}>{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Script id="schema-faq" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "Le service est-il vraiment gratuit ?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Oui, entièrement gratuit pour les acheteurs, sans engagement ni commission. Les professionnels mis en relation (courtiers, agents) sont abonnés à la plateforme OVP Pro de leur côté.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Comment fonctionne la mise en relation avec un courtier et un agent ?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Un seul formulaire suffit. Une fois votre projet déposé et votre email confirmé, votre demande est transmise à un courtier en financement et un agent immobilier de votre secteur, qui vous contactent directement.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Dois-je déjà avoir trouvé un bien avant de déposer mon projet ?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Non, ce n'est pas nécessaire. Vous pouvez déposer votre projet même si vous n'avez pas encore commencé à visiter — l'agent immobilier vous aide justement dans cette recherche.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Sous combien de temps un professionnel me contacte-t-il ?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Les professionnels sont notifiés dès que votre demande est confirmée par email. Le délai de prise de contact dépend ensuite de leur disponibilité, mais la mise en relation est immédiate de notre côté.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Mes données sont-elles transmises à d'autres organismes ?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Vos données sont transmises uniquement aux professionnels de votre secteur abonnés à OVP Pro, dans le cadre strict de votre demande. Elles ne sont jamais revendues à des tiers.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "OVP Connect intervient-il dans toute la France ?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "La mise en relation dépend des professionnels abonnés à OVP Pro présents dans votre zone géographique. Le formulaire vous permet d'indiquer votre ville pour cibler les bons interlocuteurs.",
+              },
+            },
+          ],
+        })}
+      </Script>
 
       {/* CTA FINAL */}
       <section className="ovp-section" style={{ background: "#4A5D45", color: "#F2EFE7", padding: "5rem 2rem", textAlign: "center" }}>
